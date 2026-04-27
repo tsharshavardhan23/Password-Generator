@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Neon Aura Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="container">
+  <button id="themeToggle">🌙</button>
+
+  <h2>🔐 Password Generator</h2>
+
+  <div class="output-box">
+    <input type="text" id="password" readonly>
+    <button onclick="copyPassword()">📋</button>
+  </div>
+
+  <p>Length: <span id="lengthVal">12</span></p>
+  <input type="range" id="length" min="8" max="32" value="12">
+
+  <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+  <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+  <label><input type="checkbox" id="numbers" checked> Numbers</label>
+  <label><input type="checkbox" id="symbols"> Symbols</label>
+
+  <button class="generate" onclick="generatePassword()">Generate</button>
+
+  <div class="strength-box"><div id="strength-bar"></div></div>
+  <p id="strength-text"></p>
+
+  <h3>History</h3>
+  <ul id="history"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
